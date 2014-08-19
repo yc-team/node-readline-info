@@ -84,6 +84,18 @@ interface.question('What is your job?', function(job){
 
 
 
+### rl.write(data,[key])
+
+往output流里面写指定的data。
+
+只有当terminal是TTY的时候才可用，key是一个对象字面量
+
+使用的例子：
+
+```javascript
+rl.write('hello,my name is zhangyaochun');
+```
+
 
 ## 事件：
 
