@@ -94,6 +94,10 @@ interface.question('What is your job?', function(job){
 
 ```javascript
 rl.write('hello,my name is zhangyaochun');
+
+//这样按住ctrl+u的化会删掉前面所有输入的
+//TODO:其他值呢
+rl.write(null, {ctrl: true, name: 'u'});
 ```
 
 
