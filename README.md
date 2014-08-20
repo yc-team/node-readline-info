@@ -201,3 +201,17 @@ rl.on('SIGCONT', function(){
     rl.prompt(); 
 });
 ```
+
+
+### readline.cursorTo(stream, x, y)
+
+### readline.moveCursor(stream, dx, dy)
+
+
+### readline.clearLine(stream, dir)
+
+参数dir有如下可选值：
+
+* -1  光标左右的内容
+* 1   光标右边的内容
+* 0   整个一行
