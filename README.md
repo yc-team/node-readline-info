@@ -59,6 +59,9 @@ var rl = readline.createInterface({
 
 ### rl.prompt([preserveCursor])
 
+将当前调用rl.setPrompt方法设置的内容放在新的一行，给用户新的地方来输入。
+把preserveCursor可以防止输入的光标被置在第一个位置
+
 
 示例：
 
@@ -153,4 +156,48 @@ rl.on('pause', function(cmd){
 
 
 
+### SIGINT
 
+当input流收到ctrl+c会被触发
+
+
+
+示例：
+
+```javascript
+rl.on('SIGINT', function(){
+    rl.question('Are you sure you want to exit?', function(answer){
+        if (answer.match(/^y(es)?$/i)) {
+            rl.pause();
+        }
+    });
+});
+```
+
+
+### SIGTSTP
+
+> 在Windows上面没有作用
+
+
+示例：
+
+```javascript
+rl.on('SIGTSTP', function(){
+    rl.prompt(); 
+});
+```
+
+
+### SIGCONT
+
+> 在Windows上面没有作用
+
+
+示例：
+
+```javascript
+rl.on('SIGCONT', function(){
+    rl.prompt(); 
+});
+```
