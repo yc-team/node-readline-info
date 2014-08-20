@@ -52,6 +52,24 @@ var rl = readline.createInterface({
 
 
 
+### rl.setPrompt(prompt,length)
+
+设置提示，比如你在命令行执行node，你可用看到>，这个就是node的提示
+
+
+### rl.prompt([preserveCursor])
+
+
+示例：
+
+```javascript
+//先设置,5这样的化，输入光标出现在y上面
+rl.setPrompt("zhangyaochun", 5);
+//再调用
+rl.prompt();
+```
+
+
 ### rl.question(query,callback)
 
 预先提示指定的query，然后用户应答后触发指定的callback。
